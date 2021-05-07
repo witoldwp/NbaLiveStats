@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">NBA live stats</string>
+
+    //Buttons
+    <string name="but_teams">Teams</string>
+    <string name="but_players">Players</string>
+    <string name="but_games">Games</string>
+
+    //TextView
+    <string name="tv_wallpaper">NbaLiveStats</string>
+
 </resources>
