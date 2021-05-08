@@ -12,79 +12,94 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/asset_background"
+        android:src="@drawable/asset_background4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/asset_logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_players"
         android:layout_width="230dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="56dp"
-        android:fontFamily="@font/ubuntu_bold"
+        android:layout_height="50dp"
+        android:fontFamily="@font/ubuntu_medium_italic"
         android:gravity="center"
-        android:text="@string/tv_wallpaper"
-        android:textColor="@color/gold"
-        android:textSize="34sp"
+        android:text="NBA Live Stats"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
 
 
     <Button
-        android:id="@+id/id_but_players"
+        android:id="@+id/id_btn_players"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/btn_default"
         android:fontFamily="@font/ubuntu"
-        android:hapticFeedbackEnabled="false"
-        android:text="@string/but_players"
-        android:textColor="@color/gold"
+
+        android:text="@string/btn_players"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/_id_but_teams"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_teams"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <Button
-        android:id="@+id/_id_but_teams"
+        android:id="@+id/id_btn_teams"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
         android:background="@drawable/btn_default"
-        android:duplicateParentState="true"
         android:fontFamily="@font/ubuntu"
-        android:text="@string/but_teams"
-        android:textColor="@color/gold"
+        android:text="@string/btn_teams"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/iv_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/iv_background"
-        app:layout_constraintTop_toBottomOf="@+id/tv_players" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
 
 
     <Button
-        android:id="@+id/id_but_games"
+        android:id="@+id/id_btn_games"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_default"
         android:fontFamily="@font/ubuntu"
-        android:text="@string/but_games"
-        android:textColor="@color/gold"
+        android:text="@string/btn_games"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_id_but_teams" />
+        app:layout_constraintTop_toBottomOf="@+id/id_btn_teams" />
 
-
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="120dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
