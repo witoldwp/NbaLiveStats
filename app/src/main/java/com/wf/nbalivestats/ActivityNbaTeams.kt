@@ -22,31 +22,6 @@ class ActivityNbaTeams : AppCompatActivity() {
             rV_teams.adapter = TeamNamesAdapter
             // Setting our RecyclerView's layout manager equal to LinearLayoutManager
             rV_teams.layoutManager = LinearLayoutManager(this)
-
-
-            //NewActivity launcher "ActivityNbaTeams"
-            val id_btn_teams = findViewById<Button>(R.id.id_btn_teams)
-            id_btn_teams.setOnClickListener {
-                val intent = Intent(this, ActivityNbaTeams::class.java)
-                // start your next activity
-                startActivity(intent)
-            }
-
-            //NewActivity launcher "ActivityNbaPlayers"
-            val id_btn_players = findViewById<Button>(R.id.id_btn_players)
-            id_btn_players.setOnClickListener {
-                val intent = Intent(this, ActivityNbaPlayers::class.java)
-                // start your next activity
-                startActivity(intent)
-            }
-
-            //NewActivity launcher "ActivityNbaGames"
-            val id_btn_games = findViewById<Button>(R.id.id_btn_games)
-            id_btn_games.setOnClickListener {
-                val intent = Intent(this, ActivityNbaGames::class.java)
-                // start your next activity
-                startActivity(intent)
-            }
         }
     }
 
@@ -62,4 +37,3 @@ class ActivityNbaTeams : AppCompatActivity() {
         teamNameList.add("Olivia")
         return teamNameList
     }
-}
