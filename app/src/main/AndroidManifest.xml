@@ -6,6 +6,7 @@
 
     <application
         android:allowBackup="true"
+
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -13,7 +14,8 @@
         android:theme="@style/Theme.NBALiveStats">
         <activity android:name=".ActivityNbaGames"></activity>
         <activity android:name=".ActivityNbaTeams" />
-        <activity android:name=".ActivityNbaPlayers" />
+        <activity android:name=".ActivityNbaPlayers"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

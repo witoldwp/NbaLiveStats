@@ -24,15 +24,12 @@ class MainActivity : AppCompatActivity() {
         btnTeamActivityNbaTeams.setOnClickListener {
             val intent = Intent(this,ActivityNbaTeams::class.java)
             startActivity(intent)
-//            setContentView(R.layout.activity_nba_teams)
         }
-
         //Przejście do ActivityNbaPlayers
         val btnTeamActivityNbaPlayers = findViewById<Button>(R.id.id_btn_players)
         btnTeamActivityNbaPlayers.setOnClickListener {
             val intent = Intent(this,ActivityNbaPlayers::class.java)
             startActivity(intent)
-//            setContentView(R.layout.activity_nba_players)
         }
         //Przejście do ActivityNbaGames
         val btnTeamActivityNbaGames = findViewById<Button>(R.id.id_btn_games)
@@ -40,38 +37,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,ActivityNbaGames::class.java)
             startActivity(intent)
         }
-
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
-
-        call.enqueue(object : Callback<NbaTeams> {
-            override fun onResponse(call: Call<NbaTeams>, response: Response<NbaTeams>) {
-                if (response.code() == 200) {
-                    response.body()?.data?.forEach {
-                        i("TEST", "Team: ${it.fullName}")
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<NbaTeams>, t: Throwable) {
-                i("test", "failure")
-            }
-        }
-        )
     }
-
-    val logging = HttpLoggingInterceptor()
-    val client = OkHttpClient.Builder()
-        .addInterceptor(logging)
-        .build()
-
-    val retrofit = Retrofit.Builder()
-        .baseUrl("https://www.balldontlie.io/")
-        .client(client)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
-    val service = retrofit.create(NbaStatsBallDontLie::class.java)
-    val call = service.getAllTeams(0, 30)
-    
 }
 

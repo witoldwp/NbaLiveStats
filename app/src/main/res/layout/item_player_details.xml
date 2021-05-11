@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/ll_container"
+        android:id="@+id/ll_player_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -29,7 +29,7 @@
 
 
         <TextView
-            android:id="@+id/info_team_id"
+            android:id="@+id/info_player_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
@@ -37,60 +37,70 @@
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Toronto" />
+            tools:text="Id" />
 
         <TextView
-            android:id="@+id/info_team_abbreviation"
+            android:id="@+id/info_player_firstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/info_team_id"
-            tools:text="DC" />
+            tools:text="First Name" />
 
         <TextView
-            android:id="@+id/info_team_city"
+            android:id="@+id/info_player_lastName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/info_team_abbreviation"
-            tools:text="Conference 3" />
+            tools:text="Last Name" />
 
         <TextView
-            android:id="@+id/info_team_conference"
+            android:id="@+id/info_player_position"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/info_team_city"
-            tools:text="Div 2" />
+            tools:text="Position" />
 
         <TextView
-            android:id="@+id/info_team_division"
+            android:id="@+id/info_player_heightFeet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/info_team_conference"
-            tools:text="Toronto" />
+            tools:text="height_feet" />
 
         <TextView
-            android:id="@+id/info_team_fullName"
+            android:id="@+id/info_player_heightInches"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/info_team_division"
-            tools:text="Toronto" />
+            tools:text="height_inches" />
 
         <TextView
-            android:id="@+id/info_team_name"
+            android:id="@+id/info_player_weightPounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/info_team_fullName"
+            tools:text="weight_pounds" />
+
+        <TextView
+            android:id="@+id/info_player_team"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
@@ -98,7 +108,7 @@
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/info_team_fullName"
-            tools:text="Toronto" />
+            tools:text="Team" />
 
 
     </LinearLayout>

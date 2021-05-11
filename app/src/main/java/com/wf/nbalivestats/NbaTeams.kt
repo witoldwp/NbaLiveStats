@@ -3,10 +3,10 @@ package com.wf.nbalivestats
 import com.google.gson.annotations.SerializedName
 
 class NbaTeams(
-    val data: List<NbaTeam>
+    val data: List<NbaSpecificTeam>
 )
 
-class NbaTeam(
+class NbaSpecificTeam(
     val id: Int,
     val abbreviation: String,
     val city: String,
@@ -14,4 +14,10 @@ class NbaTeam(
     val division: String,
     @SerializedName("full_name") val fullName: String,
     val name: String
-)
+
+
+) {
+    override fun toString(): String {
+        return "$name, $city, $division"
+    }
+}

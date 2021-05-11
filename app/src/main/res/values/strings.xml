@@ -8,6 +8,8 @@
 
     //Buttons text
     <string name="btn_teams">Teams</string>
+    <string name="head_teams">List of Teams</string>
+    <string name="head_player">Pick your player</string>
     <string name="btn_players">Players</string>
     <string name="btn_games">Games</string>
 
