@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.wf.nbalivestats.NbaSpecificTeam
@@ -28,21 +29,21 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         holder.info_team_conference.text = element.conference
         holder.info_team_division.text = element.division
         holder.info_team_fullName.text = element.fullName
-        holder.info_team_name.text = element.name
+        //holder.info_team_name.text = element.name
 
 
         val isElementEven = position.rem(2) == 0
         if (isElementEven) {
-            holder.ll_container.setBackgroundColor(
+            holder.cl_container_color.setBackgroundColor(
                 ContextCompat.getColor(
-                    holder.ll_container.context,
-                    R.color.blueNY_t10
+                    holder.cl_container_color.context,
+                    R.color.blueNY_t00
                 )
             )
         } else {
-            holder.ll_container.setBackgroundColor(
+            holder.cl_container_color.setBackgroundColor(
                 ContextCompat.getColor(
-                    holder.ll_container.context,
+                    holder.cl_container_color.context,
                     R.color.blueNY_t50
                 )
             )
@@ -60,7 +61,7 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         val info_team_conference = itemView.findViewById(R.id.info_team_conference) as TextView
         val info_team_division = itemView.findViewById(R.id.info_team_division) as TextView
         val info_team_fullName = itemView.findViewById(R.id.info_team_fullName) as TextView
-        val info_team_name = itemView.findViewById(R.id.info_team_name) as TextView
-        val ll_container = itemView.findViewById(R.id.ll_container) as LinearLayout
+        //val info_team_name = itemView.findViewById(R.id.info_team_name) as TextView
+        val cl_container_color = itemView.findViewById(R.id.cl_id_to_color) as ConstraintLayout
     }
 }

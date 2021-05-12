@@ -4,104 +4,147 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/cl_id_to_color">
+
+    <!--    This view shows a line between each item   -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/orange"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/ll_container"
         android:layout_width="match_parent"
+        android:weightSum="2"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@color/black">
+        android:orientation="horizontal">
 
-
-        <!--    This view shows a line between each item   -->
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0.2dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:background="@color/orange" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:background="@color/black">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:text="Id: "
+                android:textColor="@color/gray" />
 
-        <TextView
-            android:id="@+id/info_team_id"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:gravity="right"
+                android:text="Full Name: "
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:gravity="right"
+                android:text="City: "
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:gravity="right"
+                android:text="Abbreviation: "
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:gravity="right"
+                android:text="Conference: "
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:gravity="right"
+                android:text="Division: "
+                android:textColor="@color/gray"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Toronto" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:background="@color/black">
 
-        <TextView
-            android:id="@+id/info_team_abbreviation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/info_team_id"
-            tools:text="DC" />
+            <TextView
+                android:id="@+id/info_team_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="id" />
 
-        <TextView
-            android:id="@+id/info_team_city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/info_team_abbreviation"
-            tools:text="Conference 3" />
+            <TextView
+                android:id="@+id/info_team_fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/info_team_division"
+                tools:text="Team Full Name" />
 
-        <TextView
-            android:id="@+id/info_team_conference"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/info_team_city"
-            tools:text="Div 2" />
+            <TextView
+                android:id="@+id/info_team_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/info_team_abbreviation"
+                tools:text="City " />
 
-        <TextView
-            android:id="@+id/info_team_division"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/info_team_conference"
-            tools:text="Toronto" />
+            <TextView
+                android:id="@+id/info_team_abbreviation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/info_team_id"
+                tools:text="DC" />
 
-        <TextView
-            android:id="@+id/info_team_fullName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/info_team_division"
-            tools:text="Toronto" />
+            <TextView
+                android:id="@+id/info_team_conference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/info_team_city"
+                tools:text="Div 2" />
 
-        <TextView
-            android:id="@+id/info_team_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginBottom="20dp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/info_team_fullName"
-            tools:text="Toronto" />
+            <TextView
+                android:id="@+id/info_team_division"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/info_team_conference"
+                tools:text="Toronto"
+                android:layout_marginBottom="20dp"/>
 
+        </LinearLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

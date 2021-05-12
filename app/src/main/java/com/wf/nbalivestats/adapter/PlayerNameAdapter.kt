@@ -35,7 +35,7 @@ class PlayerNameAdapter(private val playerNames: List<NbaSpecificPlayer>) :
             holder.ll_player_container.setBackgroundColor(
                 ContextCompat.getColor(
                     holder.ll_player_container.context,
-                    R.color.blueNY_t10
+                    R.color.blueNY_t00
                 )
             )
         } else {
