@@ -11,7 +11,7 @@
     <string name="head_teams">List of Teams</string>
     <string name="head_player">Pick your player</string>
     <string name="btn_players">Players</string>
-    <string name="btn_games">Games</string>
+    <string name="btn_games">Standings</string>
 
     //TextView
     <string name="tv_background">NbaLiveStats</string>

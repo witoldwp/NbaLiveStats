@@ -12,11 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NBALiveStats">
-        <activity android:name=".ActivityNbaGames"></activity>
+        <activity android:name=".ActivityNbaStandings"/>
         <activity android:name=".ActivityNbaTeams" />
         <activity android:name=".ActivityNbaPlayers"
             android:windowSoftInputMode="stateVisible|adjustPan"/>
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".ActivitySplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

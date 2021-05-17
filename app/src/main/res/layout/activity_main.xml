@@ -19,6 +19,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black_background" />
+
+    <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -29,15 +34,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_players"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/ubuntu_medium_italic"
-        android:gravity="center"
-        android:text="NBA Live Stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="NBA LIVE STATS"
         android:textColor="@color/white"
-        android:textSize="26sp"
-        android:textStyle="bold"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo" />

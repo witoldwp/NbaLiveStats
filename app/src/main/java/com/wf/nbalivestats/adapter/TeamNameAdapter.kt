@@ -3,7 +3,6 @@ package com.wf.nbalivestats.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -32,6 +31,8 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         //holder.info_team_name.text = element.name
 
 
+
+        //background color on the list of teams
         val isElementEven = position.rem(2) == 0
         if (isElementEven) {
             holder.cl_container_color.setBackgroundColor(
@@ -62,6 +63,6 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         val info_team_division = itemView.findViewById(R.id.info_team_division) as TextView
         val info_team_fullName = itemView.findViewById(R.id.info_team_fullName) as TextView
         //val info_team_name = itemView.findViewById(R.id.info_team_name) as TextView
-        val cl_container_color = itemView.findViewById(R.id.cl_id_to_color) as ConstraintLayout
+        val cl_container_color = itemView.findViewById(R.id.cl_id_teamDetails_to_color) as ConstraintLayout
     }
 }

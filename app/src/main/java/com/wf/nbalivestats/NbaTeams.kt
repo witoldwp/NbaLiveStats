@@ -18,6 +18,6 @@ class NbaSpecificTeam(
 
 ) {
     override fun toString(): String {
-        return "$name, $city, $division"
+        return "$fullName"
     }
 }

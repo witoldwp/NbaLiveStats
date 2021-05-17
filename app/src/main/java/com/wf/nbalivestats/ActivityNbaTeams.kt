@@ -22,9 +22,9 @@ class ActivityNbaTeams : AppCompatActivity() {
         setContentView(R.layout.activity_nba_teams)
 
         val recyclerViewTeams = findViewById<RecyclerView>(R.id.rv_teams)
+        val Pbar = findViewById<ProgressBar>(R.id.pB_id)
         recyclerViewTeams.setHasFixedSize(true)
 
-        val Pbar = findViewById<ProgressBar>(R.id.pB_id)
 
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -35,10 +35,8 @@ class ActivityNbaTeams : AppCompatActivity() {
                     val teamNamesAdapter = TeamNameAdapter(teams)
                     recyclerViewTeams.adapter = teamNamesAdapter
                     Pbar.setVisibility(View.GONE)
-
                 }
             }
-
             override fun onFailure(call: Call<NbaTeams>, t: Throwable) {
                 Log.i("test", "failure")
             }

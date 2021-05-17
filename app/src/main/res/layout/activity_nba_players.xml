@@ -19,6 +19,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black_background" />
+
     <TextView
         android:id="@+id/tv_players"
         android:layout_width="230dp"
@@ -80,7 +85,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:itemCount="3"
+            tools:itemCount="13"
             tools:listitem="@layout/item_player_details" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
