@@ -15,7 +15,6 @@ class NbaSpecificTeam(
     @SerializedName("full_name") val fullName: String,
     val name: String
 
-
 ) {
     override fun toString(): String {
         return "$fullName"

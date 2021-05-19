@@ -17,6 +17,19 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ActivityNbaTeams : AppCompatActivity() {
+
+    val logging = HttpLoggingInterceptor()
+    val client = OkHttpClient.Builder()
+        .addInterceptor(logging)
+        .build()
+    val retrofit = Retrofit.Builder()
+        .baseUrl("https://www.balldontlie.io/")
+        .client(client)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+    val service = retrofit.create(NbaStatsBallDontLie::class.java)
+    val call = service.getAllTeams(0, 30)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nba_teams)
@@ -24,7 +37,6 @@ class ActivityNbaTeams : AppCompatActivity() {
         val recyclerViewTeams = findViewById<RecyclerView>(R.id.rv_teams)
         val Pbar = findViewById<ProgressBar>(R.id.pB_id)
         recyclerViewTeams.setHasFixedSize(true)
-
 
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -43,18 +55,4 @@ class ActivityNbaTeams : AppCompatActivity() {
         })
         recyclerViewTeams.layoutManager = LinearLayoutManager(this)
     }
-
-    val logging = HttpLoggingInterceptor()
-    val client = OkHttpClient.Builder()
-        .addInterceptor(logging)
-        .build()
-
-    val retrofit = Retrofit.Builder()
-        .baseUrl("https://www.balldontlie.io/")
-        .client(client)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
-    val service = retrofit.create(NbaStatsBallDontLie::class.java)
-    val call = service.getAllTeams(0, 30)
 }

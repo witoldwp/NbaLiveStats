@@ -40,7 +40,8 @@ def rangeseekbar = "1.1.0"
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    //implementation "com.rizlee.view:rangeseekbar:$rangeseekbar"
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.aghajari.powerview:AXPowerView:1.0.0'
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'

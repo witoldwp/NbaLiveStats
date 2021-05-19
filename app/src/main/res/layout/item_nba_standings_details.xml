@@ -40,7 +40,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
-            android:src="@drawable/los_angeles_lakers_logo"
+            tools:src="@drawable/los_angeles_lakers_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:text="LAL"
+            tools:text="LAL"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

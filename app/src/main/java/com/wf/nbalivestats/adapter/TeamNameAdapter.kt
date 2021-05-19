@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.wf.nbalivestats.NbaSpecificTeam
 import com.wf.nbalivestats.R
 
-
 class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
     RecyclerView.Adapter<TeamNameAdapter.TeamNameViewHolder>() {
 
@@ -28,9 +27,6 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         holder.info_team_conference.text = element.conference
         holder.info_team_division.text = element.division
         holder.info_team_fullName.text = element.fullName
-        //holder.info_team_name.text = element.name
-
-
 
         //background color on the list of teams
         val isElementEven = position.rem(2) == 0
@@ -62,7 +58,6 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         val info_team_conference = itemView.findViewById(R.id.info_team_conference) as TextView
         val info_team_division = itemView.findViewById(R.id.info_team_division) as TextView
         val info_team_fullName = itemView.findViewById(R.id.info_team_fullName) as TextView
-        //val info_team_name = itemView.findViewById(R.id.info_team_name) as TextView
         val cl_container_color = itemView.findViewById(R.id.cl_id_teamDetails_to_color) as ConstraintLayout
     }
 }

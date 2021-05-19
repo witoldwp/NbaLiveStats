@@ -15,7 +15,8 @@ interface NbaStatsBallDontLie {
 }
 
 interface RapidApiBasketball{
+//    @GET("standings/12/2021")
     @GET("standings")
     @Headers(value = ["x-rapidapi-key: 52a74a3cb5mshd973002475f2c78p159337jsn72bac449aefe","x-rapidapi-host: api-basketball.p.rapidapi.com"])
-    fun getNbaStandings(@Query("league") league: Int, @Query("season") season: Int ) : Call<NbaStandingsData>
+    fun getNbaStandings(@Query("league") league: Int, @Query("season") season: String) : Call<TestPlugin>
 }
