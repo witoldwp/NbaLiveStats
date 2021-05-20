@@ -1,19 +1,16 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.NbaStandings
 
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.i
 import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.wf.nbalivestats.adapter.NbaStandingsAdapter
+import com.wf.nbalivestats.R
+import com.wf.nbalivestats.RapidApiBasketball
 import com.wf.nbalivestats.databinding.ActivityNbaStandingsBinding
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.w3c.dom.Element
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,7 +32,7 @@ class ActivityNbaStandings : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     private val service: RapidApiBasketball = retrofit.create(RapidApiBasketball::class.java)
-    val call = service.getNbaStandings(12, "2020-2021")
+    private val call = service.getNbaStandings(12, "2020-2021")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,8 +45,8 @@ class ActivityNbaStandings : AppCompatActivity() {
         val pbar = findViewById<ProgressBar>(R.id.pB_id)
         recyclerViewNbaStandings.setHasFixedSize(true)
 
-        call.enqueue(object : Callback<TestPlugin> {
-            override fun onResponse(call: Call<TestPlugin>, response: Response<TestPlugin>) {
+        call.enqueue(object : Callback<NbaStandings> {
+            override fun onResponse(call: Call<NbaStandings>, response: Response<NbaStandings>) {
                 if (response.isSuccessful) {
                     val standings = response.body()?.response?.get(0) ?: listOf()
                     val nbaStandingsAdapter = NbaStandingsAdapter(standings)
@@ -57,7 +54,7 @@ class ActivityNbaStandings : AppCompatActivity() {
                     pbar.visibility = View.GONE
                 }
             }
-            override fun onFailure(call: Call<TestPlugin>, t: Throwable) {
+            override fun onFailure(call: Call<NbaStandings>, t: Throwable) {
                 t.printStackTrace()
             }
         })

@@ -1,4 +1,4 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.NbaTeams
 
 import com.google.gson.annotations.SerializedName
 

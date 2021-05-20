@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.adapter
+package com.wf.nbalivestats.NbaTeams
 
 import android.view.View
 import android.widget.TextView

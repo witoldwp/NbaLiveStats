@@ -1,4 +1,4 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.NbaTeams
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,8 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wf.nbalivestats.adapter.TeamNameAdapter
+import com.wf.nbalivestats.NbaStatsBallDontLie
+import com.wf.nbalivestats.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call

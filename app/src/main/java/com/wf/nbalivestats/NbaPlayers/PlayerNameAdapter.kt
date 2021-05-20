@@ -1,21 +1,17 @@
-package com.wf.nbalivestats.adapter
+package com.wf.nbalivestats.NbaPlayers
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.wf.nbalivestats.NbaSpecificPlayer
 import com.wf.nbalivestats.R
 
 class PlayerNameAdapter(private val playerNames: List<NbaSpecificPlayer>) :
-    RecyclerView.Adapter<PlayerNameAdapter.PlayerNameViewHolder>() {
+    RecyclerView.Adapter<PlayerNameViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerNameViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_player_details, parent, false)
+            .inflate(R.layout.fragment_player_details, parent, false)
         return PlayerNameViewHolder(view)
     }
 
@@ -48,14 +44,5 @@ class PlayerNameAdapter(private val playerNames: List<NbaSpecificPlayer>) :
 
     override fun getItemCount(): Int {
         return playerNames.size
-    }
-
-    class PlayerNameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val info_player_id = itemView.findViewById(R.id.info_player_id) as TextView
-        val info_player_firstName = itemView.findViewById(R.id.info_player_firstName) as TextView
-        val info_player_lastName = itemView.findViewById(R.id.info_player_lastName) as TextView
-        val info_player_position = itemView.findViewById(R.id.info_player_position) as TextView
-        val info_player_team = itemView.findViewById(R.id.info_player_team) as TextView
-        val cl_id_to_color = itemView.findViewById(R.id.cl_id_teamDetails_to_color) as ConstraintLayout
     }
 }

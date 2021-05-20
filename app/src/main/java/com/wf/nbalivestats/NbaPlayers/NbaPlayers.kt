@@ -1,6 +1,7 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.NbaPlayers
 
 import com.google.gson.annotations.SerializedName
+import com.wf.nbalivestats.NbaTeams.NbaSpecificTeam
 
 class NbaPlayers(
     val data: List<NbaSpecificPlayer>

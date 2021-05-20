@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.adapter
+package com.wf.nbalivestats.NbaTeams
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.wf.nbalivestats.NbaSpecificTeam
 import com.wf.nbalivestats.R
 
 class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
@@ -15,7 +14,7 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamNameViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_team_details, parent, false)
+            .inflate(R.layout.fragment_team_details, parent, false)
         return TeamNameViewHolder(view)
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityNbaPlayers">
+    tools:context=".NbaPlayers.ActivityNbaPlayers">
 
 
 
@@ -86,7 +86,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             tools:itemCount="13"
-            tools:listitem="@layout/item_player_details" />
+            tools:listitem="@layout/fragment_player_details" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

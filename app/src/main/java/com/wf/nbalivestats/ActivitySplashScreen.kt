@@ -10,8 +10,8 @@ import com.aghajari.powerview.AXPowerView
 
 class ActivitySplashScreen : AppCompatActivity() {
 
-    private val delaySwitchToLoading : Long = 500
-    private val delaySwitchToSucceed : Long = 1000
+    private val delaySwitchToLoading : Long = 1
+    private val delaySwitchToSucceed : Long = 1
     private val delaySwitchToNavigateFurther : Long = 2000
 
     override fun onCreate(savedInstantState: Bundle?) {

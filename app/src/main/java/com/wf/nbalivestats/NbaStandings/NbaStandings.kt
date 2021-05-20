@@ -1,11 +1,6 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.NbaStandings
 
-
-//data class ApiStandings(
-//    val dataApiStandings: List<TestPlugin>
-//)
-
-data class TestPlugin(
+data class NbaStandings(
     val errors: List<Any>,
     val `get`: String,
     val parameters: Parameters,

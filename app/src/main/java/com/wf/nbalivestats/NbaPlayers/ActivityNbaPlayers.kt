@@ -1,8 +1,7 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.NbaPlayers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -10,7 +9,8 @@ import android.view.View
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wf.nbalivestats.adapter.PlayerNameAdapter
+import com.wf.nbalivestats.NbaStatsBallDontLie
+import com.wf.nbalivestats.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call

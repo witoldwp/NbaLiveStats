@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.2dp"
         android:background="@color/gray"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_id_standingDetails"
@@ -31,35 +31,38 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="30." />
+            tools:text="30."
+            android:textSize="12sp"/>
 
         <ImageView
             android:id="@+id/team_logo"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
-            tools:src="@drawable/los_angeles_lakers_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/los_angeles_lakers_logo" />
 
         <TextView
             android:id="@+id/team_abbreviation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            tools:text="LAL"
+            tools:text="Los Angeles Lakers"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="12sp"/>
 
         <View
+            android:id="@+id/view3"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="200dp"
             android:background="@color/gray_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,49 +72,49 @@
             android:id="@+id/win_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
+            android:layout_marginStart="15dp"
             android:textColor="@color/gray"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view3"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="52"/>
+            tools:text="52" />
 
         <TextView
             android:id="@+id/lose_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="160dp"
+            android:layout_marginStart="20dp"
             android:textColor="@color/gray"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/win_number"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="20"/>
+            tools:text="20" />
 
         <TextView
             android:id="@+id/winRR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="200dp"
+            android:layout_marginStart="20dp"
             android:textColor="@color/gray"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lose_number"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="0.772"/>
+            tools:text="0.772" />
 
         <TextView
             android:id="@+id/last10_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
+            android:layout_marginStart="15dp"
             android:textColor="@color/gray"
-            android:textSize="14sp"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/winRR"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="7-3"/>
+            tools:text="WWWLW" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
