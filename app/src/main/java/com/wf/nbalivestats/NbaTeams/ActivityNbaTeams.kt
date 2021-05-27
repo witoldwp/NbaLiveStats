@@ -37,7 +37,7 @@ class ActivityNbaTeams : AppCompatActivity() {
 
         val recyclerViewTeams = findViewById<RecyclerView>(R.id.rv_teams)
         val Pbar = findViewById<ProgressBar>(R.id.pB_id)
-        recyclerViewTeams.setHasFixedSize(true)
+
 
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 

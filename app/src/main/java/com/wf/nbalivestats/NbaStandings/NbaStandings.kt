@@ -1,6 +1,9 @@
 package com.wf.nbalivestats.NbaStandings
 
+import android.telecom.Conference
+
 data class NbaStandings(
+
     val errors: List<Any>,
     val `get`: String,
     val parameters: Parameters,

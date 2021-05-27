@@ -49,7 +49,7 @@
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="4"
-            tools:listitem="@layout/fragment_team_details" />
+            tools:listitem="@layout/item_team_details" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--    This code shows ProgressBar Circle   -->

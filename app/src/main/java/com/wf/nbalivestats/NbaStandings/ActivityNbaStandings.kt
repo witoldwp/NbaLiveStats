@@ -48,7 +48,8 @@ class ActivityNbaStandings : AppCompatActivity() {
         call.enqueue(object : Callback<NbaStandings> {
             override fun onResponse(call: Call<NbaStandings>, response: Response<NbaStandings>) {
                 if (response.isSuccessful) {
-                    val standings = response.body()?.response?.get(0) ?: listOf()
+//                    val standings = (response.body()?.response?.get(0)?.groupBy { it.group.name })
+                    val standings = response.body()?.response?.get(0)?: listOf()
                     val nbaStandingsAdapter = NbaStandingsAdapter(standings)
                     recyclerViewNbaStandings.adapter = nbaStandingsAdapter
                     pbar.visibility = View.GONE
@@ -65,6 +66,4 @@ class ActivityNbaStandings : AppCompatActivity() {
         recyclerViewStandings.setHasFixedSize(true)
         recyclerViewStandings.layoutManager = LinearLayoutManager(this)
     }
-
-
 }

@@ -1,20 +1,17 @@
 package com.wf.nbalivestats.NbaTeams
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.wf.nbalivestats.R
 
 class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
-    RecyclerView.Adapter<TeamNameAdapter.TeamNameViewHolder>() {
+    RecyclerView.Adapter<TeamNameViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamNameViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_team_details, parent, false)
+            .inflate(R.layout.item_team_details, parent, false)
         return TeamNameViewHolder(view)
     }
 
@@ -50,13 +47,13 @@ class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
         return teamNames.size
     }
 
-    class TeamNameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val info_team_id = itemView.findViewById(R.id.info_team_id) as TextView
-        val info_team_abbreviation = itemView.findViewById(R.id.info_team_abbreviation) as TextView
-        val info_team_city = itemView.findViewById(R.id.info_team_city) as TextView
-        val info_team_conference = itemView.findViewById(R.id.info_team_conference) as TextView
-        val info_team_division = itemView.findViewById(R.id.info_team_division) as TextView
-        val info_team_fullName = itemView.findViewById(R.id.info_team_fullName) as TextView
-        val cl_container_color = itemView.findViewById(R.id.cl_id_teamDetails_to_color) as ConstraintLayout
-    }
+//    class TeamNameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+//        val info_team_id = itemView.findViewById(R.id.info_team_id) as TextView
+//        val info_team_abbreviation = itemView.findViewById(R.id.info_team_abbreviation) as TextView
+//        val info_team_city = itemView.findViewById(R.id.info_team_city) as TextView
+//        val info_team_conference = itemView.findViewById(R.id.info_team_conference) as TextView
+//        val info_team_division = itemView.findViewById(R.id.info_team_division) as TextView
+//        val info_team_fullName = itemView.findViewById(R.id.info_team_fullName) as TextView
+//        val cl_container_color = itemView.findViewById(R.id.cl_id_teamDetails_to_color) as ConstraintLayout
+//    }
 }

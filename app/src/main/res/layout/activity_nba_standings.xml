@@ -151,7 +151,7 @@
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="5"
-                    tools:listitem="@layout/fragment_nba_standings_details">
+                    tools:listitem="@layout/item_nba_standings_details">
 
                 </androidx.recyclerview.widget.RecyclerView>
 

@@ -7,11 +7,11 @@ import com.bumptech.glide.Glide
 import com.wf.nbalivestats.R
 
 class NbaStandingsAdapter(private val nbaStandings: List<Response>) :
-    RecyclerView.Adapter<NbaStandingViewHolder>(){
+    RecyclerView.Adapter<NbaStandingViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NbaStandingViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_nba_standings_details, parent, false)
+            .inflate(R.layout.item_nba_standings_details, parent, false)
         return NbaStandingViewHolder(view)
     }
 
@@ -31,4 +31,7 @@ class NbaStandingsAdapter(private val nbaStandings: List<Response>) :
     override fun getItemCount(): Int {
         return nbaStandings.size
     }
+
+//    override fun getItemCount() = 15
+
 }

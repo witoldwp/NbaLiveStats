@@ -86,7 +86,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             tools:itemCount="13"
-            tools:listitem="@layout/fragment_player_details" />
+            tools:listitem="@layout/item_player_details" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

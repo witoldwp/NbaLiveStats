@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.NbaStandings
+ package com.wf.nbalivestats.NbaStandings
 
 data class NbaTeamsRapidApi(
     val errors: List<Any>,

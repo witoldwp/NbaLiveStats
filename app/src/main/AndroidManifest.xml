@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NBALiveStats">
         <activity android:name=".NbaStandings.ActivityNbaStandings"/>
+        <activity android:name=".Test.ActivityTest"/>
         <activity android:name=".NbaTeams.ActivityNbaTeams" />
         <activity android:name=".NbaPlayers.ActivityNbaPlayers"
             android:windowSoftInputMode="stateVisible|adjustPan"/>

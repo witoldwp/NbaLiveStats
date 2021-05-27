@@ -11,7 +11,7 @@ class PlayerNameAdapter(private val playerNames: List<NbaSpecificPlayer>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerNameViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_player_details, parent, false)
+            .inflate(R.layout.item_player_details, parent, false)
         return PlayerNameViewHolder(view)
     }
 

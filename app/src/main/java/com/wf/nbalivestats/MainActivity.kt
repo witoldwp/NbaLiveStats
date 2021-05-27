@@ -9,8 +9,6 @@ import com.wf.nbalivestats.NbaStandings.ActivityNbaStandings
 import com.wf.nbalivestats.NbaTeams.ActivityNbaTeams
 
 
-// TODO: Podmienic tekst TeamName z API#1 do TeamAbr z Api#2
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         //Przejście do ActivityNbaGames
-        val btnTeamActivityNbaGames = findViewById<Button>(R.id.id_btn_games)
+        val btnTeamActivityNbaGames = findViewById<Button>(R.id.id_btn_standings)
         btnTeamActivityNbaGames.setOnClickListener {
             val intent = Intent(this, ActivityNbaStandings::class.java)
             startActivity(intent)

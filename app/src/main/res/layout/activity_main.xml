@@ -84,7 +84,7 @@
 
 
     <Button
-        android:id="@+id/id_btn_games"
+        android:id="@+id/id_btn_standings"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
