@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.NbaStandings
+package com.wf.nbalivestats.nbaStandings
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,9 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.wf.nbalivestats.nbaStandings.Adapters.HeaderAdapter
+import com.wf.nbalivestats.data.nbaStandings.model.NbaStandings
+import com.wf.nbalivestats.data.nbaStandings.model.ResponseListStandings
 import com.wf.nbalivestats.R
 import com.wf.nbalivestats.RapidApiBasketball
 import com.wf.nbalivestats.databinding.ActivityNbaStandingsBinding
@@ -21,7 +24,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ActivityNbaStandings : AppCompatActivity() {
 
     private lateinit var binding: ActivityNbaStandingsBinding
-    private lateinit var recyclerViewStandings : RecyclerView
+    private lateinit var recyclerViewStandings: RecyclerView
+    private lateinit var recyclerViewHeaders: RecyclerView
     private val logging = HttpLoggingInterceptor()
     private val client = OkHttpClient.Builder()
         .addInterceptor(logging)
@@ -41,6 +45,7 @@ class ActivityNbaStandings : AppCompatActivity() {
         initView()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 
+        val recyclerViewHeaders = findViewById<RecyclerView>(R.id.rv_header)
         val recyclerViewNbaStandings = findViewById<RecyclerView>(R.id.rv_standings)
         val pbar = findViewById<ProgressBar>(R.id.pB_id)
         recyclerViewNbaStandings.setHasFixedSize(true)
@@ -48,20 +53,31 @@ class ActivityNbaStandings : AppCompatActivity() {
         call.enqueue(object : Callback<NbaStandings> {
             override fun onResponse(call: Call<NbaStandings>, response: Response<NbaStandings>) {
                 if (response.isSuccessful) {
-//                    val standings = (response.body()?.response?.get(0)?.groupBy { it.group.name })
-                    val standings = response.body()?.response?.get(0)?: listOf()
-                    val nbaStandingsAdapter = NbaStandingsAdapter(standings)
-                    recyclerViewNbaStandings.adapter = nbaStandingsAdapter
+                    var listOfItems: MutableList<ItemListStandings>? = null
+//                  val standings = response.body()?.response?.get(0)?: listOf()
+                    val standings =
+
+                        (response.body()?.responseListStandings?.get(0)?.groupBy { it.group.name })
+                    standings?.forEach {
+                        val nameKey = it.key
+                        val listOfTeamsValue = it.value
+                        val singleItemListStandings = ItemListStandings(nameKey, listOfTeamsValue as MutableList<ResponseListStandings>)
+                        listOfItems?.add(singleItemListStandings)
+                    }
+                    val headersAdapter = HeaderAdapter(listOfItems ?: mutableListOf() )
+                    recyclerViewNbaStandings.adapter = headersAdapter
                     pbar.visibility = View.GONE
                 }
             }
+
             override fun onFailure(call: Call<NbaStandings>, t: Throwable) {
                 t.printStackTrace()
             }
         })
         recyclerViewNbaStandings.layoutManager = LinearLayoutManager(this)
     }
-    private fun initView(){
+
+    private fun initView() {
         recyclerViewStandings = findViewById(R.id.rv_standings)
         recyclerViewStandings.setHasFixedSize(true)
         recyclerViewStandings.layoutManager = LinearLayoutManager(this)

@@ -12,15 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NBALiveStats">
-        <activity android:name=".NbaStandings.ActivityNbaStandings"/>
+        <activity android:name=".nbaStandings.ActivityNbaStandings"/>
         <activity android:name=".Test.ActivityTest"/>
-        <activity android:name=".NbaTeams.ActivityNbaTeams" />
-        <activity android:name=".NbaPlayers.ActivityNbaPlayers"
+        <activity android:name=".NbaTeams.NbaTeamsActivity" />
+        <activity android:name="com.wf.nbalivestats.features.NbaPlayers.ActivityNbaPlayers"
             android:windowSoftInputMode="stateVisible|adjustPan"/>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.wf.nbalivestats.features.main.MainActivity">
 
         </activity>
-        <activity android:name=".ActivitySplashScreen">
+        <activity android:name=".splash.ActivitySplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

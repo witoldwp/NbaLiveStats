@@ -1,4 +1,4 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.os.Looper
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.aghajari.powerview.AXPowerView
+import com.wf.nbalivestats.features.main.MainActivity
+import com.wf.nbalivestats.R
 
 class ActivitySplashScreen : AppCompatActivity() {
 

@@ -150,8 +150,19 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:itemCount="5"
-                    tools:listitem="@layout/item_nba_standings_details">
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_header">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="15"
+                        tools:listitem="@layout/item_nba_standings_details">
+
+                    </androidx.recyclerview.widget.RecyclerView>
 
                 </androidx.recyclerview.widget.RecyclerView>
 

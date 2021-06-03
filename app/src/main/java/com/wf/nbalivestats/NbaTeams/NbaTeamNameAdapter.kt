@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.wf.nbalivestats.R
 
-class TeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
+class NbaTeamNameAdapter(private val teamNames: List<NbaSpecificTeam>) :
     RecyclerView.Adapter<TeamNameViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamNameViewHolder {

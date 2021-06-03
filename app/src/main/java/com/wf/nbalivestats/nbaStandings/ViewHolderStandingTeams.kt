@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.NbaStandings
+package com.wf.nbalivestats.nbaStandings
 
 import android.view.View
 import android.widget.ImageView
@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.wf.nbalivestats.R
 
-class NbaStandingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ViewHolderStandingTeams(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val league_position = itemView.findViewById(R.id.league_position) as TextView
     val team_abbreviation = itemView.findViewById(R.id.team_abbreviation) as TextView
     val win_number = itemView.findViewById(R.id.win_number) as TextView

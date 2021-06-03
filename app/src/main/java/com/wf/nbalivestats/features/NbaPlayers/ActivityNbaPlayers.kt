@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.NbaPlayers
+package com.wf.nbalivestats.features.NbaPlayers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,8 @@ import android.view.View
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wf.nbalivestats.NbaStatsBallDontLie
+import com.wf.nbalivestats.data.NbaPlayers.model.NbaPlayers
+import com.wf.nbalivestats.data.nbaStandings.api.NbaStatsBallDontLie
 import com.wf.nbalivestats.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

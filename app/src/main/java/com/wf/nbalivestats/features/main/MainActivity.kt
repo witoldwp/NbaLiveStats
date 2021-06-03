@@ -1,12 +1,13 @@
-package com.wf.nbalivestats
+package com.wf.nbalivestats.features.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.wf.nbalivestats.NbaPlayers.ActivityNbaPlayers
-import com.wf.nbalivestats.NbaStandings.ActivityNbaStandings
-import com.wf.nbalivestats.NbaTeams.ActivityNbaTeams
+import com.wf.nbalivestats.features.NbaPlayers.ActivityNbaPlayers
+import com.wf.nbalivestats.nbaStandings.ActivityNbaStandings
+import com.wf.nbalivestats.NbaTeams.NbaTeamsActivity
+import com.wf.nbalivestats.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         //Przejście do ActivityNbaTeams
         val btnTeamActivityNbaTeams = findViewById<Button>(R.id.id_btn_teams)
         btnTeamActivityNbaTeams.setOnClickListener {
-            val intent = Intent(this, ActivityNbaTeams::class.java)
+            val intent = Intent(this, NbaTeamsActivity::class.java)
             startActivity(intent)
         }
         //Przejście do ActivityNbaPlayers

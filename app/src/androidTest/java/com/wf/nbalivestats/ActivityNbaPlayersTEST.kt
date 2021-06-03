@@ -1,14 +1,11 @@
 package com.wf.nbalivestats
 
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.intent.Intents
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import com.wf.nbalivestats.NbaPlayers.ActivityNbaPlayers
+import com.wf.nbalivestats.features.NbaPlayers.ActivityNbaPlayers
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule

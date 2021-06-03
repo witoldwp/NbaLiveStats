@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wf.nbalivestats.NbaStatsBallDontLie
+import com.wf.nbalivestats.data.nbaStandings.api.NbaStatsBallDontLie
 import com.wf.nbalivestats.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -17,7 +17,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ActivityNbaTeams : AppCompatActivity() {
+class NbaTeamsActivity : AppCompatActivity() {
 
     val logging = HttpLoggingInterceptor()
     val client = OkHttpClient.Builder()
@@ -45,7 +45,7 @@ class ActivityNbaTeams : AppCompatActivity() {
             override fun onResponse(call: Call<NbaTeams>, response: Response<NbaTeams>) {
                 if (response.isSuccessful) {
                     val teams = response.body()?.data ?: listOf()
-                    val teamNamesAdapter = TeamNameAdapter(teams)
+                    val teamNamesAdapter = NbaTeamNameAdapter(teams)
                     recyclerViewTeams.adapter = teamNamesAdapter
                     Pbar.setVisibility(View.GONE)
                 }

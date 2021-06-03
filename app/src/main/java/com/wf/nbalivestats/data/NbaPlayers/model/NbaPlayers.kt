@@ -1,4 +1,4 @@
-package com.wf.nbalivestats.NbaPlayers
+package com.wf.nbalivestats.data.NbaPlayers.model
 
 import com.google.gson.annotations.SerializedName
 import com.wf.nbalivestats.NbaTeams.NbaSpecificTeam
